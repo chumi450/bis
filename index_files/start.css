@@ -1,0 +1,221 @@
+.pr-0{
+    padding-left: 0;
+    
+}
+.lateral-logo{
+    height:100%;
+    background-color: rgba(255, 0, 0, 0.6509803921568628);    
+    display:flex;
+    
+
+    
+}
+.text-lateral-logo{
+    display:flex;    
+    width:100%;    
+    height:100%;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+    
+    
+}
+.text-lateral-logo img{
+    margin:auto;
+    height: 50%;
+    width:2rem;
+}
+.label-login{
+    color: rgb(120, 120, 120);
+    font-family: "DINRoundPro";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    width:100%;
+}
+.input-format{
+    width:100%;
+    height: 2.8em;
+    background-color: #ffffff;
+    opacity: 0.5;
+    padding-left: 1em;
+    outline:none;
+    border: 0.016px solid rgba(0, 0, 0, 0.1803921568627451);
+    font-size: 12px !important;
+}
+.list-option{
+    margin-top:0.2rem;
+}
+.list-option::before {
+    content: "•";
+    margin-right:0.2rem;
+}
+.list-option a{
+    color: #000000;
+    /* font-size:0.5rem */
+}
+.button-login{
+    width:80%;
+    font-size: 12px;
+}
+.olvido-pass{
+    color: #000000;
+    font-family: Arial;
+    font-size: 13px;
+}
+.seguridad-container{
+    margin-top:1rem;
+    
+}
+.seguridad-container div{
+    background-color:rgba(255, 255, 255, 0.88);
+}
+.seguridad-container div h2{
+    color: rgb(255, 0, 0);
+    font-size: 13px;
+    border-color: red;
+}
+.contenedor-input{
+    background-color: rgba(255, 255, 255, 0.5490196078431373);
+    display: block;
+    /* height: 34px; */
+    border: 0.016px solid #0000002e;
+}
+.contenedor-input img{
+    cursor:pointer;
+    margin-right:0.1rem;
+    paadding-top:2rem;
+    vertical-align: middle;
+    width: 0.7em;
+}
+.input-especial{
+    border:none;
+    background:none;
+    padding-bottom:1px;
+    
+}
+body{
+    height:100%;
+}
+.modal_container{
+
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+.modal_content{
+    height:12rem;
+    width:27rem;
+}
+.modal_header{
+    border:none;
+    background-color: rgb(255, 0, 0);    
+}
+.modal_header h4{
+
+    color: rgb(255, 255, 255);
+    font-family: "DINRoundPro";
+    font-size:0.6rem;
+    margin-top:0.4rem;
+    margin-bottom:0.4rem
+}
+.modal_header button{
+    color: #e8e8e8fa;
+    font-size:1.1rem;
+    font-weight:900;
+    opacity: 26.5;
+}
+.modal_body p{
+    margin-left:1rem;
+    margin-top:1rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size:0.5rem
+}
+.modal_boton{
+    margin-top:5.2rem;
+    
+   
+
+}
+.modal_boton button{
+    background-color: rgb(255, 1, 0);
+    color: rgb(255, 255, 255);
+    font-family: "DINRoundPro";
+    font-size:0.6rem;
+    width:10rem;
+    height:1.2rem;
+    border:1px;    
+
+}
+.modal_boton button:hover{
+    background-color: rgb(140, 17, 17);   
+
+}
+.modal_info_content{
+    /* width:40%; */
+    /* margin:auto; */
+}
+.modal_info_content .body-text{
+    font-weight:600;
+    line-height: 1.5;
+}
+
+.alert-text-error{
+    font-family: "DINRoundPro";
+    font-size: 15px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+    .label-login{
+         font-family: "DIN Round Pro";
+    }
+    .modal_header h4{
+
+        font-family: "DIN Round Pro";
+    }
+    .modal_boton button{
+        font-family: "DIN Round Pro";
+
+    }
+    .alert-text-error{
+        font-family: "DIN Round Pro";
+    }
+/*     .modal_content{
+        height:12rem;
+        width:27rem;
+        position:relative;
+        right:120%;
+    } */
+
+
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* Login font text  */
+.font-login-text{
+    color:white;
+    line-height:1.5;
+    font-weight:700;
+
+}
+.font-login-medium{
+    font-size:2.5vw;
+}
+.font-login-big{
+    font-size:3.5vw;
+    font-weight:1000;
+    
+}
+.font-login-small{
+    font-size:2vw;
+}
+
+
+

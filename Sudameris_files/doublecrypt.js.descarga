@@ -1,0 +1,75 @@
+var publicFunctionEncrypt;
+(function( doublecrypt, $, undefined ) {
+    //Private Property
+    // don't know if we're going to use this
+    var isCtxReady = false;
+    var cryptvars = [];
+
+    //Public Property
+    doublecrypt.ctx = {
+        iv: null,
+        key: null
+    }
+
+    //Public Methods
+    doublecrypt.init = function (_iv, _b64key) {
+        this.setIV(_iv);
+        this.setKey(_b64key);
+    }
+
+    doublecrypt.setIV = function(_iv) {
+        this.ctx.iv = CryptoJS.enc.Base64.parse(_iv);
+    };
+
+    doublecrypt.setKey = function(_b4key) {
+        this.ctx.key = CryptoJS.enc.Base64.parse(_b4key);
+    };
+
+    doublecrypt.addVars = function(vars) {
+        if (Array.isArray(vars)) {
+            cryptvars = cryptvars.concat(vars);
+        } else {
+            cryptvars.push(vars);
+        }
+    }
+
+    doublecrypt.ctxReady = function() {
+        return this.ctx.key != null && this.ctx.iv != null && this.vars.length > 0;
+    }
+
+    function toBase64(v) {
+        return CryptoJS.enc.Base64.stringify(v);
+    }
+    
+    publicFunctionEncrypt = function encrypt(v)
+    {
+        return CryptoJS.AES.encrypt(v, doublecrypt.ctx.key, { iv: doublecrypt.ctx.iv }).ciphertext.toString(CryptoJS.enc.Base64);
+    }
+
+    $(document).ready(function() {
+        $(".doublecrypt_submit").on('submit', function (e) {
+            $(this).find("input").filter(".doublecrypt_var").each(function(idx, fld) {
+                let v = $(fld).val();
+                let ve = publicFunctionEncrypt(v);
+                $(fld).val(ve);
+            });
+        });
+
+    });
+
+}( window.doublecrypt = window.doublecrypt || {}, jQuery ));
+// FOR CSRF_TOKEN
+$(document).on("submit", "form", function(eventObj) {
+    $("<input />").attr("type", "hidden")
+        .attr("name", "_csrfToken")
+        .attr("value", CSRF_TOKEN)
+        .appendTo( $(this) );
+    return true;
+});
+
+XMLHttpRequest.prototype.origOpen = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open   = function () {
+    this.origOpen.apply(this, arguments);
+    this.setRequestHeader('_csrfToken', CSRF_TOKEN);
+};
+//

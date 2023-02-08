@@ -1,0 +1,151 @@
+@charset "UTF-8";
+.var_text{
+    background-color: rgba(120, 120, 120, 0.38823529411764707);
+    width:100%;
+}
+.var_text p{
+    color: rgb(120, 120, 120);
+    font-family: Arial;
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.container_v{
+    margin-right: auto;
+    margin-left:auto;
+    width: 21em;
+    margin-top:1rem;
+}
+.container_v div h2{
+    color: rgb(255, 0, 0);
+    border-color: rgb(255, 0, 0);
+}
+.texto_ingreso_v{
+    margin-top:0.2rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+.number_user{
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 0.6rem;
+    font-weight: 700;
+    /* margin-bottom:0.6rem; */
+}
+.texto_verificacion_v{
+    color: rgb(120, 120, 120);
+    font-family: "DINRoundPro";
+    font-size: 0.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-right: 7em;
+}
+.input_verificacion{
+    width: 1em;
+    height:1.7rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size:1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+.cuenta_regresiva_style{
+    color: hsl(0, 100%, 50%);
+    font-family: Arial;
+    font-size: 0.6rem;
+    text-align:right;
+    margin-right:1.7rem;
+    margin-top:0.3rem;
+}
+.text_pregunta_codigo{
+    margin-top:0.5rem;
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+    font-size: 0.5rem;
+}
+.text_reenvio{
+    margin-top:0.2rem;
+    color: hsl(0, 100%, 50%);
+    font-family: "DINRoundPro";
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+.text_reenvio img{
+    padding-left:0.2rem;
+    height:0.5rem;
+
+}
+.text_reenvio span{
+    cursor:pointer;    
+}
+.text_reenvio span:hover{
+    color: rgb(185, 11, 11);
+}
+.button_next:hover{
+    background-color:rgb(197, 13, 13);
+}
+.button_previous:hover{
+    background-color:#c50d0d17;
+}
+.boton_si{
+    background-color:rgb(255, 0, 0) !important;
+    width:7rem !important;
+    margin-right:1rem;
+}
+.boton_no{
+    background-color:rgb(204, 204, 204) !important;
+    width:7rem !important;
+}
+.boton_si:hover{
+    background-color:rgba(128, 12, 12, 0.9803921568627451) !important;
+}
+.boton_no:hover{
+    background-color:rgb(153, 153, 153) !important;
+    
+}
+
+.clase_error{
+    color:rgb(255, 0, 0);
+    font-family: "DINRoundPro";
+    font-size: 0.6rem;
+    font-weight: 500;
+    /*! margin: ; */
+    padding-top: 0.2em;
+}
+#background-view{
+    display:flex;
+}
+.container-trust-notification{
+    margin-right: auto;
+    margin-left:auto;
+    width: 37em;
+    margin-top:1rem;
+}
+.mt-25{
+    margin-top:22px
+}
+
+.container-forget-password{
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+    .texto_verificacion_v{        
+        font-family: "DIN Round Pro";        
+    }
+    .text_reenvio{
+        font-family: "DIN Round Pro";       
+    }
+    .clase_error{
+        font-family: "DIN Round Pro";       
+    }
+
+}
+
+
+

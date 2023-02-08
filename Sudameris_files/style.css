@@ -1,0 +1,445 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button {
+  -webkit-appearance: none;
+}
+button:focus {
+  outline: none;
+}
+
+
+
+/****** end reset*****/
+
+/* Start fonts */
+@font-face {
+	font-family: DinRoundPro;
+	src: url(fonts/dinroundpro.ttf);
+}
+
+@font-face {
+	font-family: DinRoundProLight;
+	src: url(fonts/dinroundpro-light.ttf);
+}
+
+@font-face {
+	font-family: Univers;
+	src: url(fonts/univers-condensed-light.ttf);
+}
+/* End fonts */
+
+html {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}	
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.parent-container{
+    padding-bottom: 30px;
+}
+
+/* On screens wider than sm, make the layout full-height.*/
+@media only screen and (min-width: 492px) {
+	
+	/* Make layout full height: https://stackoverflow.com/a/19089780/1305067 */
+ 	html, body, .container {
+	    height: 100%;
+	}
+	.container {
+	    display: table;
+	    width: 100%;
+	    box-sizing: border-box;
+	}
+	.row {
+	    height: 100%;
+	    display: table-row;
+	}
+	.row .no-float {
+	  display: table-cell;
+	  float: none;
+	}
+}
+
+/* Adjust the font size according to the screen width */
+@media only screen and (max-width: 768px) { html { font-size: 16px; } }
+@media only screen and (min-width: 768px) { html { font-size: 20px; } }
+@media only screen and (min-width: 992px) { html { font-size: 24px; } }
+@media only screen and (min-width: 1200px) { html { font-size: 28px; } }
+
+
+#welcome-content {
+	background-color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+	font-family: DinRoundPro;
+	padding: 4rem;
+}
+#title-box {
+	border-bottom: 1px solid white;
+	display: table;
+	width: 100%;
+	padding-bottom: 2rem; 
+}
+#title-box > div {
+	font-size: 2rem;	
+ 	display: table-cell;
+ 	vertical-align: middle;
+}
+#subtitle-box {
+	margin-top: 2rem;
+	display: table;
+	width: 100%;
+}
+#subtitle-box > div {
+	font-size: 2.2rem;	
+	display: table-cell;
+ 	vertical-align: middle;	
+ 	font-family: DinRoundProLight;
+}
+.menu {
+	margin-top: 3rem;
+	font-family: Univers;
+	font-size: 1rem;
+}
+
+.menu li {
+	padding-bottom: 1rem;
+	font-size: 0.9rem;
+}
+#mobile-menu {
+	margin-left: 1rem;
+}
+
+#login-content {
+	background-color: rgb(255, 255, 255);
+	font-family: Univers;
+}
+#login-header {
+	margin-top: 5rem;
+}
+#login-title {
+	font-size: 2rem;
+	color: lightgray;
+	font-family: DinRoundProLight;
+	margin-bottom: 0.2rem;
+	text-align: left;
+}
+.login-field {
+  border: 0;
+  outline: 0;
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+#login-button {
+	width: 100%;
+	background-color: red;
+	border: 0;
+	color: white;
+}
+
+/* COMMON START */
+
+.font-small {
+  font-size: 12px;
+}
+.font-medium {
+  font-size: 15px
+}
+.font-large {
+  font-size: 18px;
+}
+.text-color-very-light {
+  color: rgb(255, 255, 255)
+}
+.text-color-medium {
+  color: rgb(120, 120, 120);
+}
+.text-color-very-dark {
+  color: rgb(0, 0, 0);
+}
+.text-color-red {
+  color: rgb(255, 0, 0);
+}
+.font-style-label {
+  font-family: 'DinRoundPro';
+  font-size: 0.5rem;
+}
+.font-style-value {
+  font-family: 'Arial';
+}
+.bkg-color-clear {
+  background-color: rgba(0, 0, 0, 0);
+}
+.bkg-color-very-light {
+  background-color: rgb(255, 255, 255);
+}
+.bkg-color-red {
+  background-color: rgb(255, 0, 0);
+}
+.bkg-color-medium {
+  background-color: rgb(228, 228, 228);
+}
+.border-bottom-color-medium {
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+.positive-button {
+  display: block;
+  height: 2.5em;
+  width: 12rem;
+  margin: 1rem auto 0.2rem auto;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.back-button {
+  display: block;
+  height: 2.5em;
+  width: 12rem;
+  border: 1px solid rgb(255, 0, 0);
+  margin: 0.2rem auto 0.2rem auto;
+  cursor: pointer;
+}
+
+/* COMMON END */
+
+.subtitle-view {
+  padding: 0.5rem;
+}
+
+#header {
+    /* background-image: url(img/header@2x.jpg); */
+    background-color: rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2%;  /* Aspect ratio of header image. */
+    display: table;
+    width: 101%;
+    position: relative;
+    left: -1%;
+}
+#header .header-text{
+    background-image: url(img/logo@2x.png);
+    padding-top: 10%;
+    background-size: 23%;
+    background-position: 12%;
+    min-height: 100px;
+    background-repeat: no-repeat;
+}
+
+#title-bar {
+  padding-left: 16%;
+  line-height: 2rem;
+  
+}
+#title-bar-icon {
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+}
+#title-bar-text {
+}
+
+.subtitle-text {
+  padding-bottom: 0.3rem;
+}
+
+.welcome-bkg {
+  background-color:rgb(255, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#otp-title {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+#otp-countdown {
+  margin: 0.5rem 0;
+  text-align: right;
+}
+#otp-area {
+  text-align: center;
+}
+#otp-inputs {
+  margin: 0 auto;
+  display: inline-block;
+}
+#otp-wrapper {
+  display: inline-block;
+}
+#otp-wrapper > input {
+  width: 41px;
+  height: 46px;
+  border: 3px solid #F0EFEB;
+  border-radius: 3px;
+  font-size: 30px;
+  font-family: Arial;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+#otp-wrapper > input:focus {
+  outline: none !important;
+  border: 1px solid rgb(187, 187, 187);
+  box-shadow: 0 0 10px rgb(187, 187, 187);
+}
+#otp-instructions {
+  margin: 1rem;
+  line-height: 1.5;
+}
+#trust-instructions {
+  margin: 1rem;
+  line-height: 1.5;
+}
+#otp-resend-text {
+  margin: 1rem 0rem auto auto;
+  display: block;
+  text-align: center;
+}
+#otp-resend-button {
+  margin: 0 auto;
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 4rem;
+  height: 30px;
+  background-image: url(../img/resend@2x.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+}
+
+/*** Spinner CSS ***/
+.auth-spinner .lds-ellipsis {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    z-index: 150;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+.auth-spinner .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgb(212, 1, 0);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.auth-spinner .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.auth-spinner .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.auth-spinner .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.auth-spinner .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(19px, 0);
+    }
+}
+.auth-spinner{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(128, 128, 128);
+    z-index: 170;
+    background-color: rgba(128, 128, 128, 0.35);
+}
+/*    */
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .font-style-label {
+        font-family: "DIN Round Pro";
+
+    }
+
+
+}
+
